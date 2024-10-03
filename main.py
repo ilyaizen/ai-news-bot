@@ -81,6 +81,9 @@ async def check_for_new_posts():
         new_post_ids = current_post_ids - last_posts
         new_posts = [post for post in current_posts if post['id'] in new_post_ids]
         
+        print(f"Total posts: {len(current_posts)}")
+        print(f"New posts: {len(new_posts)}")
+
         last_posts = current_post_ids  # Update last_posts for the next check
 
         return new_posts
@@ -92,10 +95,10 @@ async def check_for_new_posts():
 async def post_stories(stories, channel):
     if stories:
         for post in stories:
-            await channel.send(f"New post: {post['title']}\n"
-                               f"Link: {post['link']}\n"
-                               f"HN Link: {post['hn_link']}\n"
-                               f"Points: {post['points']} | {post['time']} | {post['comments']}")
+            if 'ycombinator.com' in post['link']:
+                await channel.send(f"{post['link']}")
+            else:
+                await channel.send(f"{post['link']} (<{post['hn_link']}>)")
         print(f"Sent {len(stories)} posts to Discord.")
     else:
         print("No new posts to send.")
@@ -107,10 +110,14 @@ async def on_ready():
 
 async def scheduled_check():
     while True:
+        print("Running scheduled check...")
         new_posts = await check_for_new_posts()
         if new_posts:
+            print(f"Found {len(new_posts)} new posts")
             channel = bot.get_channel(CHANNEL_ID)
             await post_stories(new_posts, channel)
+        else:
+            print("No new posts found")
         await asyncio.sleep(900)  # 15 minutes
 
 @bot.command(name='test')
@@ -135,8 +142,10 @@ async def get_latest_post(ctx):
         posts = extract_posts(soup)
         if posts:
             latest_post = posts[0]
-            await ctx.send(f"{latest_post['link']}\n"
-                           f"HN Link: <{latest_post['hn_link']}>")
+            if 'ycombinator.com' in latest_post['link']:
+                await ctx.send(f"{latest_post['link']}")
+            else:
+                await ctx.send(f"{latest_post['link']} (<{latest_post['hn_link']}>)")
         else:
             await ctx.send('No posts found. This could indicate an issue with the website structure or the scraping process.')
     except Exception as e:

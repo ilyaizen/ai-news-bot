@@ -1,0 +1,5 @@
+logs/service_stderr.log
+logs/service_stdout.log
+ai_news_bot_error.log
+delete
+.env

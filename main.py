@@ -182,6 +182,6 @@ try:
     bot.run(DISCORD_TOKEN)
 
 except Exception as e:
-    with open("C:\\Users\\User\\Desktop\\ai-news-bot\\ai_news_bot_error.log", "w") as f:
+    with open("D:\\GitHub\\ai-news-bot\\ai_news_bot_error.log", "w") as f:
         f.write(f"Error: {str(e)}\n")
         f.write(traceback.format_exc())

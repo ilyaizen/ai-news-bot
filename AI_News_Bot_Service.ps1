@@ -1,9 +1,9 @@
 # AI_News_Bot_Service.ps1
 
 $ServiceName = "AI_News_Bot_Service"
-$ExecutablePath = "C:\Users\User\Desktop\ai-news-bot\main.py"
+$ExecutablePath = "D:\GitHub\ai-news-bot\main.py"
 $PythonPath = "C:\Users\User\AppData\Local\Programs\Python\Python39\python.exe"
-$WorkingDirectory = "C:\Users\User\Desktop\ai-news-bot"
+$WorkingDirectory = "D:\GitHub\ai-news-bot"
 $NssmPath = "C:\Tools\nssm\nssm.exe"  # Changed path to a more likely location
 $RequiredPackages = @("discord.py")  # Add more packages as needed
 

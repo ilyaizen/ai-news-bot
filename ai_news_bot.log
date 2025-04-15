@@ -1,0 +1,167 @@
+2025-04-15 15:50:12,861 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2025-04-15 15:50:12,863 [INFO] Starting AI News Bot...
+2025-04-15 15:50:12,864 [INFO] logging in using static token
+2025-04-15 15:50:14,117 [INFO] Shard ID None has connected to Gateway (Session ID: 4dbaa7502f1b6df68b288a6a30b22371).
+2025-04-15 15:50:14,118 [INFO] Bot connected to Discord gateway.
+2025-04-15 15:50:16,193 [INFO] Logged in as AI News Bot (1289820541703684218)
+2025-04-15 15:50:16,194 [INFO] ------
+2025-04-15 15:50:16,194 [INFO] posted_links.json not found. Starting with an empty set of posted links.
+2025-04-15 15:50:16,194 [INFO] Bot is ready, starting scheduled check task.
+2025-04-15 15:50:16,195 [INFO] Running scheduled check...
+2025-04-15 15:50:17,583 [INFO] Found 30 new posts.
+2025-04-15 15:50:17,963 [INFO] Posted: I Accidentally Triggered a Hacker News Manhunt (https://posthuman.blog/how-i-accidentally-triggered-a-hacker-news-manhunt/)
+2025-04-15 15:50:19,267 [INFO] Posted: I Tested the AI That Calls Your Elderly Parents If You Can't Be Bothered (https://www.404media.co/i-tested-the-ai-that-calls-your-elderly-parents-if-you-cant-bothered/)
+2025-04-15 15:50:20,601 [INFO] Posted: The path to open-sourcing the DeepSeek inference engine (https://github.com/deepseek-ai/open-infra-index/tree/main/OpenSourcing_DeepSeek_Inference_Engine)
+2025-04-15 15:50:21,939 [INFO] Posted: Introducing Cloud WAN (https://cloud.google.com/blog/products/networking/connect-globally-with-cloud-wan-for-the-ai-era)
+2025-04-15 15:50:23,361 [INFO] Posted: Show HN: LiftmyCV – AI Job Search Agent and Auto-Apply Tool (https://www.liftmycv.com/)
+2025-04-15 15:50:24,624 [INFO] Posted: OpenAI Is a Systemic Risk to the Tech Industry (https://www.wheresyoured.at/openai-is-a-systemic-risk-to-the-tech-industry-2/)
+2025-04-15 15:50:25,944 [INFO] Posted: GPT 4.1 (https://platform.openai.com/docs/models/gpt-4.1)
+2025-04-15 15:50:27,208 [INFO] Posted: GPT-4.1 in the API (https://openai.com/index/gpt-4-1/)
+2025-04-15 15:50:28,469 [INFO] Posted: GPT 4.1 Nano (https://platform.openai.com/docs/models/gpt-4.1-nano)
+2025-04-15 15:50:29,807 [INFO] Posted: UK founders grow frustrated over dearth of funding: 'problem is getting worse' (https://techcrunch.com/2025/04/13/uk-founders-grow-frustrated-over-dearth-of-funding-the-problem-is-getting-worse/)
+2025-04-15 15:50:31,068 [INFO] Posted: We benchmarked GPT-4.1: it's better at code reviews than Claude Sonnet 3.7 (https://www.qodo.ai/blog/benchmarked-gpt-4-1/)
+2025-04-15 15:50:32,349 [INFO] Posted: AudioX: Diffusion Transformer for Anything-to-Audio Generation (https://zeyuet.github.io/AudioX/)
+2025-04-15 15:50:33,873 [INFO] Posted: MooseAgent: A LLM Based Multi-Agent Framework for Automating Moose Simulation (https://arxiv.org/abs/2504.08621)
+2025-04-15 15:50:35,154 [INFO] Posted: Nuclear Power Is Back. and This Time, AI Can Help Manage the Reactors (https://www.wsj.com/articles/nuclear-power-is-back-and-this-time-ai-can-help-manage-the-reactors-5ce03ae7)
+2025-04-15 15:50:36,660 [INFO] Posted: Watermark segmentation (https://github.com/Diffusion-Dynamics/watermark-segmentation)
+2025-04-15 15:50:38,317 [INFO] Posted: Understanding Aggregate Trends for Apple Intelligence Using Differential Privacy (https://machinelearning.apple.com/research/differential-privacy-aggregate-trends)
+2025-04-15 15:50:39,803 [INFO] Posted: Big Tech May Have Fielded a New Weapon Against the Small Internet: AI (https://cheapskatesguide.org/articles/ai-against-small-internet.html)
+2025-04-15 15:50:41,086 [INFO] Posted: Intel sells 51% stake in Altera to private equity firm on a $8.75B valuation (https://newsroom.intel.com/corporate/intel-partner-deal-news-april2025)
+2025-04-15 15:50:42,511 [INFO] Posted: The Cost of Being Crawled: LLM Bots and Vercel Image API Pricing (https://metacast.app/blog/engineering/postmortem-llm-bots-image-optimization)
+2025-04-15 15:50:44,079 [INFO] Posted: Show HN: AES-256 brute force using structured logic (UUIDs and xy = x/y rule) (https://github.com/ElSolem/project_oceans)
+2025-04-15 15:50:45,395 [INFO] Posted: How I Don't Use LLMs (https://www.gleech.org/llms)
+2025-04-15 15:50:46,703 [INFO] Posted: Waymo to begin data collection in Tokyo with driver-operated test rides (https://www.reuters.com/business/autos-transportation/waymo-begin-data-collection-tokyo-with-driver-operated-test-rides-2025-04-10/)
+2025-04-15 15:50:48,057 [INFO] Posted: Waymo's Quickly Taking More Market Share Than I Expected (https://cleantechnica.com/2025/04/13/waymos-quickly-taking-more-market-share-than-i-expected/)
+2025-04-15 15:50:49,505 [INFO] Posted: The Post-Developer Era (https://www.joshwcomeau.com/blog/the-post-developer-era/)
+2025-04-15 15:50:50,845 [INFO] Posted: LLMs Don't Reward Originality, They Flatten It (https://ahrefs.com/blog/llms-flatten-originality/)
+2025-04-15 15:50:52,190 [INFO] Posted: Show HN: Real-time AI analysis of Trump's posts on financial markets within 30s (https://www.trumpposted.com/)
+2025-04-15 15:50:53,473 [INFO] Posted: A weird phrase is plaguing scientific papers due to a glitch in AI training data (https://theconversation.com/a-weird-phrase-is-plaguing-scientific-papers-and-we-traced-it-back-to-a-glitch-in-ai-training-data-254463)
+2025-04-15 15:50:55,059 [INFO] Posted: Typewise (YC S22) Is Hiring an ML Engineer (Zurich, Switzerland) (https://www.ycombinator.com/companies/typewise/jobs/u4OdKNh-machine-learning-engineer-f-m-x)
+2025-04-15 15:50:56,386 [INFO] Posted: Teuken-7B-Base and Teuken-7B-Instruct: Towards European LLMs (https://arxiv.org/abs/2410.03730)
+2025-04-15 15:50:57,800 [INFO] Posted: Ask HN: How to unit test AI responses? (https://news.ycombinator.com/item?id=43691671)
+2025-04-15 15:50:58,807 [INFO] Successfully posted 30 links. Total posted: 30
+2025-04-15 16:05:16,207 [INFO] Running scheduled check...
+2025-04-15 16:05:17,588 [INFO] No new posts found.
+2025-04-15 16:20:16,210 [INFO] Running scheduled check...
+2025-04-15 16:20:17,709 [INFO] No new posts found.
+2025-04-15 16:25:09,960 [INFO] Received !latest command from iamsleak
+2025-04-15 16:25:12,335 [INFO] Sent latest post (https://news.ycombinator.com/item?id=43691671) on command.
+2025-04-15 16:26:41,588 [WARNING] Bot disconnected from Discord gateway.
+2025-04-15 16:26:41,993 [INFO] Shard ID None has successfully RESUMED session 4dbaa7502f1b6df68b288a6a30b22371.
+2025-04-15 16:26:41,993 [INFO] Bot resumed session with Discord gateway.
+2025-04-15 16:35:16,216 [INFO] Running scheduled check...
+2025-04-15 16:35:17,598 [INFO] No new posts found.
+2025-04-15 16:50:16,215 [INFO] Running scheduled check...
+2025-04-15 16:50:17,638 [INFO] Found 2 new posts.
+2025-04-15 16:50:17,984 [INFO] Posted: Tell HN: A realization I've had about working with AIs and building software (https://news.ycombinator.com/item?id=43691256)
+2025-04-15 16:50:19,352 [INFO] Posted: AI isn't ready to replace human coders for debugging, researchers say (https://arstechnica.com/ai/2025/04/researchers-find-ai-is-pretty-bad-at-debugging-but-theyre-working-on-it/)
+2025-04-15 16:50:20,380 [INFO] Successfully posted 2 links. Total posted: 32
+2025-04-15 17:05:16,200 [INFO] Running scheduled check...
+2025-04-15 17:05:17,617 [INFO] No new posts found.
+2025-04-15 17:20:16,199 [INFO] Running scheduled check...
+2025-04-15 17:20:18,603 [INFO] No new posts found.
+2025-04-15 17:35:16,209 [INFO] Running scheduled check...
+2025-04-15 17:35:17,644 [INFO] Found 1 new posts.
+2025-04-15 17:35:18,092 [INFO] Posted: Generative Modelling in Latent Space (https://sander.ai/2025/04/15/latents.html)
+2025-04-15 17:35:19,160 [INFO] Successfully posted 1 links. Total posted: 33
+2025-04-15 17:50:16,211 [INFO] Running scheduled check...
+2025-04-15 17:50:17,693 [INFO] No new posts found.
+2025-04-15 18:05:16,213 [INFO] Running scheduled check...
+2025-04-15 18:05:17,588 [INFO] Found 1 new posts.
+2025-04-15 18:05:17,998 [INFO] Posted: LightlyTrain: Better Vision Models, Faster – No Labels Needed (https://github.com/lightly-ai/lightly-train)
+2025-04-15 18:05:19,000 [INFO] Successfully posted 1 links. Total posted: 34
+2025-04-15 18:20:16,210 [INFO] Running scheduled check...
+2025-04-15 18:20:18,030 [INFO] No new posts found.
+2025-04-15 18:33:28,587 [WARNING] Bot disconnected from Discord gateway.
+2025-04-15 18:33:28,991 [INFO] Shard ID None has successfully RESUMED session 4dbaa7502f1b6df68b288a6a30b22371.
+2025-04-15 18:33:28,991 [INFO] Bot resumed session with Discord gateway.
+2025-04-15 18:35:16,198 [INFO] Running scheduled check...
+2025-04-15 18:35:17,556 [INFO] No new posts found.
+2025-04-15 18:50:16,193 [INFO] Running scheduled check...
+2025-04-15 18:50:17,595 [INFO] No new posts found.
+2025-04-15 19:05:16,198 [INFO] Running scheduled check...
+2025-04-15 19:05:17,523 [INFO] No new posts found.
+2025-04-15 19:19:00,701 [WARNING] Bot disconnected from Discord gateway.
+2025-04-15 19:19:00,717 [ERROR] Attempting a reconnect in 1.47s
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1345, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 989, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1020, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 864, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 961, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1002, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 701, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1351, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-04-15 19:19:00,868 [WARNING] Bot disconnected from Discord gateway.
+2025-04-15 19:20:01,278 [INFO] Shard ID None has successfully RESUMED session 4dbaa7502f1b6df68b288a6a30b22371.
+2025-04-15 19:20:01,278 [INFO] Bot resumed session with Discord gateway.
+2025-04-15 19:20:50,739 [INFO] Running scheduled check...
+2025-04-15 19:20:52,105 [INFO] Found 1 new posts.
+2025-04-15 19:20:52,107 [WARNING] Can't keep up, shard ID None websocket is 51.0s behind.
+2025-04-15 19:20:52,516 [INFO] Posted: Cohere Launches Embed 4 (https://cohere.com/blog/embed-4)
+2025-04-15 19:20:53,549 [INFO] Successfully posted 1 links. Total posted: 35
+2025-04-15 19:35:16,197 [INFO] Running scheduled check...
+2025-04-15 19:35:17,569 [INFO] No new posts found.
+2025-04-15 19:50:16,217 [INFO] Running scheduled check...
+2025-04-15 19:50:17,479 [INFO] Found 1 new posts.
+2025-04-15 19:50:18,158 [INFO] Posted: OpenAI is building a social network (https://www.theverge.com/openai/648130/openai-social-network-x-competitor)
+2025-04-15 19:50:19,163 [INFO] Successfully posted 1 links. Total posted: 36
+2025-04-15 20:05:16,230 [INFO] Running scheduled check...
+2025-04-15 20:05:17,631 [INFO] Found 1 new posts.
+2025-04-15 20:05:18,112 [INFO] Posted: Benn Jordan's AI poison pill and the weird world of adversarial noise (https://cdm.link/benn-jordan-ai-poison-pill/)
+2025-04-15 20:05:19,150 [INFO] Successfully posted 1 links. Total posted: 37
+2025-04-15 20:20:16,204 [INFO] Running scheduled check...
+2025-04-15 20:20:17,650 [INFO] No new posts found.
+2025-04-15 20:35:16,201 [INFO] Running scheduled check...
+2025-04-15 20:35:17,848 [INFO] No new posts found.
+2025-04-15 20:50:16,204 [INFO] Running scheduled check...
+2025-04-15 20:50:17,583 [INFO] Found 1 new posts.
+2025-04-15 20:50:18,195 [INFO] Posted: Cloud Exit Is Real: Why Cloud Economics Break Down at Scale (https://www.simplyblock.io/blog/cloud-exit-economics/)
+2025-04-15 20:50:19,224 [INFO] Successfully posted 1 links. Total posted: 38
+2025-04-15 21:05:16,202 [INFO] Running scheduled check...
+2025-04-15 21:05:17,584 [INFO] No new posts found.

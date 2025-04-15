@@ -3,3 +3,4 @@ logs/service_stdout.log
 ai_news_bot_error.log
 delete
 .env
+ai_news_bot.log

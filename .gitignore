@@ -4,3 +4,5 @@ ai_news_bot_error.log
 delete
 .env
 ai_news_bot.log
+posted_links.json
+ai_news_bot.log

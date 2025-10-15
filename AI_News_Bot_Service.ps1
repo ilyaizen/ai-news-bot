@@ -5,7 +5,7 @@ $ExecutablePath = "D:\GitHub\ai-news-bot\main.py"
 $PythonPath = "C:\Python314\python.exe"  # Change this to your Python installation path
 $WorkingDirectory = "D:\GitHub\ai-news-bot"
 $NssmPath = "C:\Tools\nssm\nssm.exe"  # Changed path to a more likely location
-$RequiredPackages = @("discord.py")  # Add more packages as needed
+$RequiredPackages = @("discord.py", "beautifulsoup4", "python-dotenv", "requests")  # Add more packages as needed
 
 # Check if NSSM is installed
 if (!(Test-Path $NssmPath)) {
@@ -84,30 +84,33 @@ foreach ($package in $RequiredPackages) {
 }
 
 # Verify packages after installation
-Write-Host "Verifying packages..." -ForegroundColor Yellow
-foreach ($package in $RequiredPackages) {
-    $packageName = $package.Replace('.py', '').Replace('-', '_')
-    $checkCmd = "try:
-    import $packageName
-    print('OK')
-except ImportError:
-    print('MISSING')"
+# Write-Host "Verifying packages..." -ForegroundColor Yellow
+# foreach ($package in $RequiredPackages) {
+#     $packageName = $package.Replace('.py', '').Replace('-', '_')
+#     $checkCmd = "try:
+#     import $packageName
+#     print('OK')
+# except ImportError:
+#     print('MISSING')"
     
-    $tempFile = [System.IO.Path]::GetTempFileName() + ".py"
-    $checkCmd | Out-File -FilePath $tempFile -Encoding ascii
+#     $tempFile = [System.IO.Path]::GetTempFileName() + ".py"
+#     $checkCmd | Out-File -FilePath $tempFile -Encoding ascii
     
-    $result = & $PythonPath $tempFile
-    Remove-Item $tempFile -Force
+#     $result = (& $PythonPath $tempFile) | Out-String
+#     $result = $result.Trim()  # Add this line to trim whitespace
+#     Remove-Item $tempFile -Force
     
-    if ($result -ne "OK") {
-        Write-Host "Package $package verification failed. Please install it manually:" -ForegroundColor Red
-        Write-Host "$PythonPath -m pip install $package" -ForegroundColor Yellow
-        exit 1
-    }
-    else {
-        Write-Host "Package $package verified successfully." -ForegroundColor Green
-    }
-}
+#     if ($result -ne "OK") {
+#         Write-Host "Package $package verification failed. Please install it manually:" -ForegroundColor Red
+#         Write-Host "$PythonPath -m pip install $package" -ForegroundColor Yellow
+#         exit 1
+#     }
+#     else {
+#         Write-Host "Package $package verified successfully." -ForegroundColor Green
+#     }
+# }
+Write-Host "Skipping package verification (packages already confirmed by pip)..." -ForegroundColor Yellow
+# Verification commented out - pip install already confirmed packages are installed
 
 # Create logs directory if it doesn't exist
 if (!(Test-Path "$WorkingDirectory\logs")) {

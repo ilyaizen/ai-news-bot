@@ -6,3 +6,4 @@ delete
 ai_news_bot.log
 posted_links.json
 ai_news_bot.log
+/__pycache__

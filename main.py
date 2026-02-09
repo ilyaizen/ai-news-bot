@@ -38,6 +38,7 @@ NEWS_SOURCE_URL = "https://histre.com/hn/?tags=+ai"
 CHECK_INTERVAL_SECONDS = 900  # 15 minutes
 POSTED_LINKS_FILE = 'posted_links.json' # File to store posted link IDs
 LOG_FILE = 'ai_news_bot.log' # Combined log file
+CATCHUP_PAGES = 5  # Number of pages to fetch during catch-up (covers ~5 days of stories)
 
 # --- Logging Setup ---
 logging.basicConfig(
@@ -106,6 +107,66 @@ def retrieve_and_parse_html_with_retries(max_retries=5, initial_delay=5):
                 logging.error(f"Failed to retrieve news from {NEWS_SOURCE_URL} after {max_retries} attempts.")
                 return None # Return None if all retries fail
     return None
+
+def retrieve_and_parse_html_with_retries_page(page_num=1, max_retries=5, initial_delay=5):
+    """
+    Retrieves and parses HTML from a specific page of the news source URL with retry logic.
+    Uses exponential backoff for delays between retries.
+    """
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    # Construct URL with page parameter
+    page_url = f"{NEWS_SOURCE_URL}&page={page_num}" if page_num > 1 else NEWS_SOURCE_URL
+    
+    delay = initial_delay
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(page_url, headers=headers, timeout=30)
+            response.raise_for_status()
+            return BeautifulSoup(response.text, 'html.parser')
+        except RequestException as e:
+            logging.warning(f"Attempt {attempt + 1}/{max_retries} failed to fetch page {page_num}: {e}")
+            if attempt < max_retries - 1:
+                logging.info(f"Retrying in {delay} seconds...")
+                time.sleep(delay)
+                delay *= 2
+            else:
+                logging.error(f"Failed to retrieve page {page_num} from {page_url} after {max_retries} attempts.")
+                return None
+    return None
+
+def fetch_multiple_pages(num_pages=CATCHUP_PAGES):
+    """
+    Fetches and parses multiple pages from the news source.
+    Returns a list of all posts from all pages.
+    """
+    all_posts = []
+    for page_num in range(1, num_pages + 1):
+        logging.info(f"Fetching page {page_num}/{num_pages}...")
+        soup = retrieve_and_parse_html_with_retries_page(page_num)
+        if soup:
+            posts = extract_posts(soup)
+            if posts:
+                all_posts.extend(posts)
+                logging.info(f"Found {len(posts)} posts on page {page_num}")
+            else:
+                logging.info(f"No posts found on page {page_num}")
+        else:
+            logging.warning(f"Failed to fetch page {page_num}, skipping...")
+        # Small delay between page requests to be respectful
+        time.sleep(1)
+    
+    # Remove duplicates (same post might appear on multiple pages)
+    seen_ids = set()
+    unique_posts = []
+    for post in all_posts:
+        if post['id'] not in seen_ids:
+            seen_ids.add(post['id'])
+            unique_posts.append(post)
+    
+    logging.info(f"Total unique posts across {num_pages} pages: {len(unique_posts)}")
+    return unique_posts
 
 def extract_posts(soup):
     """Extracts post details from the parsed HTML soup."""
@@ -322,7 +383,7 @@ async def get_latest_post(ctx):
         if latest_post.get('hn_link'):
              message_content += f"\nComments: <{latest_post['hn_link']}> ({latest_post.get('comments', 'N/A')})"
         else:
-            message_content += f"\n(Comments: {latest_post.get('comments', 'N/A')})"
+             message_content += f"\n(Comments: {latest_post.get('comments', 'N/A')})"
         await ctx.send(message_content)
         logging.info(f"Sent latest post ({latest_post['id']}) on command.")
     except discord.errors.HTTPException as e:
@@ -331,6 +392,99 @@ async def get_latest_post(ctx):
     except Exception as e:
         logging.error(f"Unexpected error sending latest post: {e}\n{traceback.format_exc()}")
         await ctx.send("An unexpected error occurred while sending the latest post.")
+
+@bot.command(name='catchup')
+@commands.is_owner()
+async def catch_up_stories(ctx, num_pages: int = CATCHUP_PAGES):
+    """
+    Catches up on missed stories by fetching multiple pages and posting them to Discord.
+    Usage: !catchup [num_pages] - defaults to CATCHUP_PAGES if not specified
+    """
+    global posted_link_ids
+    
+    if num_pages < 1 or num_pages > 20:
+        await ctx.send('Number of pages must be between 1 and 20.')
+        return
+    
+    logging.info(f"Received !catchup command from {ctx.author} for {num_pages} pages")
+    await ctx.send(f'🔄 Starting catch-up for {num_pages} pages...')
+    
+    try:
+        # Fetch multiple pages
+        all_posts = fetch_multiple_pages(num_pages)
+        
+        if not all_posts:
+            await ctx.send('No posts found during catch-up.')
+            return
+        
+        # Find new posts (not in posted_link_ids)
+        current_post_ids = set(post['id'] for post in all_posts)
+        new_post_ids = current_post_ids - posted_link_ids
+        
+        if not new_post_ids:
+            await ctx.send(f'✅ All {len(all_posts)} posts from {num_pages} pages are already in posted_links.json. No new stories to post.')
+            logging.info(f"Catch-up complete: All {len(all_posts)} posts already tracked.")
+            return
+        
+        # Get new posts sorted by oldest first (reverse order)
+        new_posts = [post for post in all_posts if post['id'] in new_post_ids]
+        new_posts.reverse()  # Post oldest first
+        
+        await ctx.send(f'📊 Found {len(new_posts)} new posts to catch up on. Starting to post...')
+        
+        channel = bot.get_channel(CHANNEL_ID)
+        if not channel:
+            logging.error(f"Could not find channel with ID {CHANNEL_ID}. Cannot post.")
+            await ctx.send(f'❌ Could not find channel with ID {CHANNEL_ID}.')
+            return
+        
+        posted_in_this_run = set()
+        for post in new_posts:
+            try:
+                message_content = f"{post['title']}\nLink: {post['link']}"
+                if post.get('hn_link'):
+                     message_content += f"\nComments: <{post['hn_link']}> ({post.get('comments', 'N/A')})"
+                else:
+                     message_content += f"\n(Comments: {post.get('comments', 'N/A')})"
+
+                await channel.send(message_content)
+                logging.info(f"Posted catch-up story: {post['title']} ({post['link']})")
+                posted_in_this_run.add(post['id'])
+                await asyncio.sleep(1)  # Short delay between posts to avoid rate limits
+
+            except discord.errors.HTTPException as e:
+                logging.error(f"Discord API error posting catch-up link {post['id']}: {e.status} - {e.text}")
+                if e.status == 429:
+                     retry_after = e.retry_after or 5
+                     logging.warning(f"Rate limited. Retrying post after {retry_after} seconds.")
+                     await asyncio.sleep(retry_after)
+                continue
+
+            except discord.errors.Forbidden:
+                 logging.error(f"Permission error: Cannot send messages to channel {CHANNEL_ID}.")
+                 await ctx.send(f'❌ Permission error: Cannot send messages to channel {CHANNEL_ID}.')
+                 break
+
+            except Exception as e:
+                logging.error(f"Unexpected error posting catch-up link {post['id']}: {e}\n{traceback.format_exc()}")
+                continue
+
+        # Update the global set and save to file only AFTER attempting to post
+        if posted_in_this_run:
+            posted_link_ids.update(posted_in_this_run)
+            save_posted_links()
+            
+            await ctx.send(f'✅ Catch-up complete!\n'
+                          f'📊 Total posts found: {len(all_posts)}\n'
+                          f'🆕 New posts posted to Discord: {len(posted_in_this_run)}\n'
+                          f'📝 Total tracked posts: {len(posted_link_ids)}')
+            logging.info(f"Catch-up complete: Posted {len(posted_in_this_run)} new posts from {num_pages} pages. Total tracked: {len(posted_link_ids)}")
+        else:
+            await ctx.send(f'⚠️ Catch-up complete but no posts were successfully sent to Discord.')
+        
+    except Exception as e:
+        logging.error(f"Error during catch-up: {e}\n{traceback.format_exc()}")
+        await ctx.send(f'❌ An error occurred during catch-up: {e}')
 
 # --- Main Execution ---
 if __name__ == "__main__":

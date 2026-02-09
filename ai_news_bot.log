@@ -311532,3 +311532,106 @@ RuntimeError: Task is already launched and is not completed.
 2026-02-09 21:21:49,143 [INFO] Posted: State of Ruby 2026 (https://devnewsletter.com/p/state-of-ruby-2026/)
 2026-02-09 21:21:50,475 [INFO] Posted: US companies accused of 'AI washing' re: job losses (https://www.theguardian.com/us-news/2026/feb/08/ai-washing-job-losses-artificial-intelligence)
 2026-02-09 21:21:51,613 [INFO] Successfully posted 28 links. Total posted: 7728
+2026-02-09 21:27:13,463 [INFO] AI News Bot shutting down.
+2026-02-09 21:28:29,595 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-09 21:28:29,596 [INFO] Starting AI News Bot...
+2026-02-09 21:28:29,597 [INFO] logging in using static token
+2026-02-09 21:28:32,923 [INFO] Shard ID None has connected to Gateway (Session ID: 3f7e02ca8f1a1980d50fb8ca25933fc2).
+2026-02-09 21:28:32,924 [INFO] Bot connected to Discord gateway.
+2026-02-09 21:28:34,950 [INFO] Logged in as AI News Bot (1289820541703684218)
+2026-02-09 21:28:34,950 [INFO] ------
+2026-02-09 21:28:34,955 [INFO] Loaded 7728 previously posted link IDs from posted_links.json
+2026-02-09 21:28:34,956 [INFO] Bot is ready, starting scheduled check task.
+2026-02-09 21:28:34,956 [INFO] Running scheduled check...
+2026-02-09 21:28:36,852 [INFO] No new posts found.
+2026-02-09 21:29:13,884 [INFO] Received !catchup command from 0mnique for 5 pages
+2026-02-09 21:29:14,136 [INFO] Fetching page 1/5...
+2026-02-09 21:29:14,845 [INFO] Found 30 posts on page 1
+2026-02-09 21:29:15,846 [INFO] Fetching page 2/5...
+2026-02-09 21:29:16,866 [INFO] Found 30 posts on page 2
+2026-02-09 21:29:17,867 [INFO] Fetching page 3/5...
+2026-02-09 21:29:18,846 [INFO] Found 30 posts on page 3
+2026-02-09 21:29:19,846 [INFO] Fetching page 4/5...
+2026-02-09 21:29:21,041 [INFO] Found 30 posts on page 4
+2026-02-09 21:29:22,041 [INFO] Fetching page 5/5...
+2026-02-09 21:29:23,091 [INFO] Found 30 posts on page 5
+2026-02-09 21:29:24,092 [INFO] Total unique posts across 5 pages: 145
+2026-02-09 21:29:24,382 [INFO] Catch-up complete: Synced 53 new posts from 5 pages. Total tracked: 7781
+2026-02-09 21:33:25,538 [INFO] AI News Bot shutting down.
+2026-02-09 21:33:26,310 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-09 21:33:26,311 [INFO] Starting AI News Bot...
+2026-02-09 21:33:26,312 [INFO] logging in using static token
+2026-02-09 21:33:27,861 [INFO] Shard ID None has connected to Gateway (Session ID: cc22810ddd8b75254356c00257627700).
+2026-02-09 21:33:27,861 [INFO] Bot connected to Discord gateway.
+2026-02-09 21:33:29,873 [INFO] Logged in as AI News Bot (1289820541703684218)
+2026-02-09 21:33:29,887 [INFO] ------
+2026-02-09 21:33:29,891 [INFO] Loaded 7728 previously posted link IDs from posted_links.json
+2026-02-09 21:33:29,892 [INFO] Bot is ready, starting scheduled check task.
+2026-02-09 21:33:29,892 [INFO] Running scheduled check...
+2026-02-09 21:33:31,454 [INFO] No new posts found.
+2026-02-09 21:33:40,293 [INFO] Received !catchup command from 0mnique for 5 pages
+2026-02-09 21:33:40,623 [INFO] Fetching page 1/5...
+2026-02-09 21:33:41,453 [INFO] Found 30 posts on page 1
+2026-02-09 21:33:42,454 [INFO] Fetching page 2/5...
+2026-02-09 21:33:43,404 [INFO] Found 30 posts on page 2
+2026-02-09 21:33:44,404 [INFO] Fetching page 3/5...
+2026-02-09 21:33:45,376 [INFO] Found 30 posts on page 3
+2026-02-09 21:33:46,376 [INFO] Fetching page 4/5...
+2026-02-09 21:33:47,465 [INFO] Found 30 posts on page 4
+2026-02-09 21:33:48,466 [INFO] Fetching page 5/5...
+2026-02-09 21:33:49,460 [INFO] Found 30 posts on page 5
+2026-02-09 21:33:50,461 [INFO] Total unique posts across 5 pages: 145
+2026-02-09 21:33:51,030 [INFO] Posted catch-up story: The F Word (https://muratbuffalo.blogspot.com/2026/02/friction.html)
+2026-02-09 21:33:52,369 [INFO] Posted catch-up story: Show HN: Smooth CLI – Token-efficient browser for AI agents (https://docs.smooth.sh/cli/overview)
+2026-02-09 21:33:53,735 [INFO] Posted catch-up story: Show HN: Slack CLI for Agents (https://github.com/stablyai/agent-slack)
+2026-02-09 21:33:55,305 [INFO] Posted catch-up story: Large Tabular Models: Fundamental raises $255M to build models for enterprises (https://techcrunch.com/2026/02/05/fundamental-raises-255-million-series-a-with-a-new-take-on-big-data-analysis/)
+2026-02-09 21:33:56,835 [INFO] Posted catch-up story: Amazon plunge continues $1T wipeout as AI bubble fears ignite sell-off (https://www.cnbc.com/2026/02/06/ai-sell-off-stocks-amazon-oracle.html)
+2026-02-09 21:33:58,245 [INFO] Posted catch-up story: An Update on Heroku (https://www.heroku.com/blog/an-update-on-heroku/)
+2026-02-09 21:33:59,530 [INFO] Posted catch-up story: Amazon Shares Sink as Company Boosts AI Spending by Nearly 60% (https://www.wsj.com/business/earnings/amazon-earnings-q4-2025-amzn-stock-996e5cc2)
+2026-02-09 21:34:00,813 [INFO] Posted catch-up story: Show HN: GitClaw – An AI assistant that runs in GitHub Actions (https://github.com/SawyerHood/gitclaw)
+2026-02-09 21:34:02,164 [INFO] Posted catch-up story: The Waymo World Model (https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation)
+2026-02-09 21:34:03,516 [INFO] Posted catch-up story: Show HN: A password system with no database, no sync, and nothing to breach (https://bastion-enclave.vercel.app)
+2026-02-09 21:34:04,941 [INFO] Posted catch-up story: Please don't share our Signal messages with your AI Agent (https://touchgrass.fightforthefuture.org/please-dont-share-our-signal-messages-with-your-ai-agent/)
+2026-02-09 21:34:06,241 [INFO] Posted catch-up story: Show HN: BioTradingArena – Benchmark for LLMs to predict biotech stock movements (https://www.biotradingarena.com/hn)
+2026-02-09 21:34:07,685 [INFO] Posted catch-up story: AI Regex Scientist: A self-improving regex solver (https://news.ycombinator.com/item?id=46916245)
+2026-02-09 21:34:09,205 [INFO] Posted catch-up story: How to effectively write quality code with AI (https://heidenstedt.org/posts/2026/how-to-effectively-write-quality-code-with-ai/)
+2026-02-09 21:34:10,627 [INFO] Posted catch-up story: Man who videotaped himself BASE jumping in Yosemite arrested, says it was AI (https://www.latimes.com/california/story/2026-02-05/man-videotaped-himself-base-jumping-in-yosemite-federal-officials-say-he-says-it-was-ai)
+2026-02-09 21:34:11,932 [INFO] Posted catch-up story: DRAM prices to double in Q1 as AI ambitions push memory fabs to their limit (https://www.theregister.com/2026/02/02/dram_prices_expected_to_double/)
+2026-02-09 21:34:13,244 [INFO] Posted catch-up story: Ask HN: Non AI-obsessed tech forums (https://news.ycombinator.com/item?id=46919016)
+2026-02-09 21:34:15,012 [INFO] Posted catch-up story: Reality is losing the deepfake war (https://www.theverge.com/podcast/874038/ai-deepfakes-war-on-reality-c2pa-labels)
+2026-02-09 21:34:16,362 [INFO] Posted catch-up story: Introducing the Developer Knowledge API and MCP Server (https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/)
+2026-02-09 21:34:17,707 [INFO] Posted catch-up story: Writing an LLM from scratch, part 32d – Interventions: adding attention bias (https://www.gilesthomas.com/2026/02/llm-from-scratch-32d-interventions-adding-attention-bias)
+2026-02-09 21:34:19,257 [INFO] Posted catch-up story: Installing Ollama and Gemma 3B on Linux (https://byandrev.dev/en/blog/ollama-in-linux)
+2026-02-09 21:34:20,563 [INFO] Posted catch-up story: I'm going to cure my girlfriend's brain tumor (https://andrewjrod.substack.com/p/im-going-to-cure-my-girlfriends-brain)
+2026-02-09 21:34:22,022 [INFO] Posted catch-up story: Why I Joined OpenAI (https://www.brendangregg.com/blog/2026-02-07/why-i-joined-openai.html)
+2026-02-09 21:34:23,416 [INFO] Posted catch-up story: Make Trust Irrelevant: A Gamer's Take on Agentic AI Safety (https://github.com/Deso-PK/make-trust-irrelevant)
+2026-02-09 21:34:24,826 [INFO] Posted catch-up story: Claude Code Is the Inflection Point (https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point)
+2026-02-09 21:34:26,243 [INFO] Posted catch-up story: The AI boom is causing shortages everywhere else (https://www.washingtonpost.com/technology/2026/02/07/ai-spending-economy-shortages/)
+2026-02-09 21:34:27,901 [INFO] Posted catch-up story: Big Tech's AI Push Is Costing More Than the Moon Landing (https://www.wsj.com/tech/ai/ai-spending-tech-companies-compared-02b90046)
+2026-02-09 21:34:29,297 [INFO] Posted catch-up story: Reinforcement Learning from Human Feedback (https://rlhfbook.com/)
+2026-02-09 21:34:30,774 [INFO] Posted catch-up story: Lawyer sets new standard for abuse of AI; judge tosses case (https://arstechnica.com/tech-policy/2026/02/randomly-quoting-ray-bradbury-did-not-save-lawyer-from-losing-case-over-ai-errors/)
+2026-02-09 21:34:32,106 [INFO] Posted catch-up story: Show HN: One-click AI employee with its own cloud desktop (https://cloudbot-ai.com)
+2026-02-09 21:34:33,462 [INFO] Posted catch-up story: Software factories and the agentic moment (https://factory.strongdm.ai/)
+2026-02-09 21:34:34,819 [INFO] Posted catch-up story: First Proof (https://arxiv.org/abs/2602.05192)
+2026-02-09 21:34:36,260 [INFO] Posted catch-up story: StrongDM's AI team build serious software without even looking at the code (https://simonwillison.net/2026/Feb/7/software-factory/)
+2026-02-09 21:34:37,554 [INFO] Posted catch-up story: The Future of the Global Open-Source AI Ecosystem: From DeepSeek to AI+ (https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3)
+2026-02-09 21:34:38,875 [INFO] Posted catch-up story: Show HN: I'm 15 and built a free tool for reading ancient texts. (https://the-lexicon-project.netlify.app/)
+2026-02-09 21:34:40,231 [INFO] Posted catch-up story: Google Translate apparently vulnerable to prompt injection (https://www.lesswrong.com/posts/tAh2keDNEEHMXvLvz/prompt-injection-in-google-translate-reveals-base-model)
+2026-02-09 21:34:41,703 [INFO] Posted catch-up story: Token-to-Credit Conversion: Avoiding Floating-Point Errors in AI Billing Systems (https://app.writtte.com/read/kZ8Kj6R)
+2026-02-09 21:34:43,007 [INFO] Posted catch-up story: Why Claude Cowork is a math problem Indian IT can't solve (https://restofworld.org/2026/indian-it-ai-stock-crash-claude-cowork/)
+2026-02-09 21:34:44,501 [INFO] Posted catch-up story: Google and Microsoft Paying Creators $500K+ to Promote AI Tools (https://www.cnbc.com/2026/02/06/google-microsoft-pay-creators-500000-and-more-to-promote-ai.html)
+2026-02-09 21:34:46,053 [INFO] Posted catch-up story: Top AI models fail at >96% of tasks (https://www.zdnet.com/article/ai-failed-test-on-remote-freelance-jobs/)
+2026-02-09 21:34:47,386 [INFO] Posted catch-up story: Show HN: LocalGPT – A local-first AI assistant in Rust with persistent memory (https://github.com/localgpt-app/localgpt)
+2026-02-09 21:34:48,684 [INFO] Posted catch-up story: Beyond agentic coding (https://haskellforall.com/2026/02/beyond-agentic-coding)
+2026-02-09 21:34:50,023 [INFO] Posted catch-up story: Quantization-Aware Distillation (https://ternarysearch.blogspot.com/2026/02/quantization-aware-distillation.html)
+2026-02-09 21:34:51,340 [INFO] Posted catch-up story: Substack confirms data breach affects users’ email addresses and phone numbers (https://techcrunch.com/2026/02/05/substack-confirms-data-breach-affecting-email-addresses-and-phone-numbers/)
+2026-02-09 21:34:52,685 [INFO] Posted catch-up story: OpenClaw is changing my life (https://reorx.com/blog/openclaw-is-changing-my-life/)
+2026-02-09 21:34:54,043 [INFO] Posted catch-up story: Turning books to courses using AI (https://www.book2course.org/)
+2026-02-09 21:34:55,572 [INFO] Posted catch-up story: Open-Weight Models Are Getting Serious: GLM 4.7 vs. MiniMax M2.1 (https://blog.kilo.ai/p/open-weight-models-are-getting-serious)
+2026-02-09 21:34:56,967 [INFO] Posted catch-up story: Matchlock – Secures AI agent workloads with a Linux-based sandbox (https://github.com/jingkaihe/matchlock)
+2026-02-09 21:34:58,296 [INFO] Posted catch-up story: Any chess position with 8 pieces on board and one pair of pawns has been solved (https://mastodon.online/@lichess/116029914921844500)
+2026-02-09 21:34:59,627 [INFO] Posted catch-up story: MIT Technology Review has confirmed that posts on Moltbook were fake (https://www.technologyreview.com/2026/02/06/1132448/moltbook-was-peak-ai-theater/)
+2026-02-09 21:35:00,986 [INFO] Posted catch-up story: Slop Terrifies Me (https://ezhik.jp/ai-slop-terrifies-me/)
+2026-02-09 21:35:02,369 [INFO] Posted catch-up story: OpenAI exec becomes top Trump donor with $25M gift (https://finance.yahoo.com/news/openai-exec-becomes-top-trump-230342268.html)
+2026-02-09 21:35:03,657 [INFO] Posted catch-up story: Eight more months of agents (https://crawshaw.io/blog/eight-more-months-of-agents)
+2026-02-09 21:35:04,972 [INFO] Catch-up complete: Posted 53 new posts from 5 pages. Total tracked: 7781

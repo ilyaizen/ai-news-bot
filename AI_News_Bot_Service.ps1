@@ -46,18 +46,97 @@ if ($ServiceExists) {
 # Verify Python path exists
 if (!(Test-Path $PythonPath)) {
     Write-Host "ERROR: Python executable not found at $PythonPath" -ForegroundColor Red
-    Write-Host "Checking for Python installations..."
-    $PythonInstalls = Get-ChildItem "C:\Users\User\AppData\Local\Programs\Python" -Directory -ErrorAction SilentlyContinue
-    if ($PythonInstalls) {
-        Write-Host "Found Python installations: $($PythonInstalls.Name -join ', ')"
-        $PossiblePython = Get-ChildItem "C:\Users\User\AppData\Local\Programs\Python" -Recurse -Filter "python.exe" | Select-Object -First 1
-        if ($PossiblePython) {
-            Write-Host "Using this Python path instead: $($PossiblePython.FullName)" -ForegroundColor Green
-            $PythonPath = $PossiblePython.FullName
+    Write-Host "Checking for Python installations..." -ForegroundColor Yellow
+    
+    # Try to find Python using multiple methods
+    $PythonFound = $false
+    
+    # Method 1: Try Python Launcher (py)
+    Write-Host "Trying Python Launcher (py)..." -ForegroundColor Yellow
+    try {
+        $pyVersion = & py --version 2>&1
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "Found Python Launcher: $pyVersion" -ForegroundColor Green
+            # Get the actual python.exe path from the launcher
+            $pyPath = & py -c "import sys; print(sys.executable)" 2>&1
+            if ($LASTEXITCODE -eq 0 -and (Test-Path $pyPath)) {
+                Write-Host "Using Python path: $pyPath" -ForegroundColor Green
+                $PythonPath = $pyPath
+                $PythonFound = $true
+            }
         }
     }
-    else {
-        Write-Host "No Python installations found. Please install Python or correct the path." -ForegroundColor Red
+    catch {
+        Write-Host "Python Launcher not available." -ForegroundColor Yellow
+    }
+    
+    # Method 2: Try 'python' command in PATH
+    if (-not $PythonFound) {
+        Write-Host "Trying 'python' command..." -ForegroundColor Yellow
+        try {
+            $pythonVersion = & python --version 2>&1
+            if ($LASTEXITCODE -eq 0) {
+                Write-Host "Found Python: $pythonVersion" -ForegroundColor Green
+                # Get the full path
+                $pythonPath = (Get-Command python).Source
+                Write-Host "Using Python path: $pythonPath" -ForegroundColor Green
+                $PythonPath = $pythonPath
+                $PythonFound = $true
+            }
+        }
+        catch {
+            Write-Host "'python' command not found in PATH." -ForegroundColor Yellow
+        }
+    }
+    
+    # Method 3: Check common installation directories
+    if (-not $PythonFound) {
+        Write-Host "Searching common Python installation directories..." -ForegroundColor Yellow
+        $possiblePythonDirs = @(
+            "C:\Users\User\AppData\Local\Programs\Python",
+            "C:\Users\User\AppData\Local\Microsoft\WindowsApps",
+            "C:\Python314",
+            "C:\Python313",
+            "C:\Python312",
+            "C:\Python311",
+            "C:\Python310",
+            "C:\Program Files\Python314",
+            "C:\Program Files\Python313",
+            "C:\Program Files\Python312",
+            "C:\Program Files\Python311",
+            "C:\Program Files\Python310"
+        )
+        
+        foreach ($dir in $possiblePythonDirs) {
+            if (Test-Path $dir) {
+                Write-Host "Checking directory: $dir" -ForegroundColor Yellow
+                $PythonInstalls = Get-ChildItem $dir -Directory -ErrorAction SilentlyContinue
+                if ($PythonInstalls) {
+                    Write-Host "Found Python installations: $($PythonInstalls.Name -join ', ')" -ForegroundColor Green
+                    $PossiblePython = Get-ChildItem $dir -Recurse -Filter "python.exe" -ErrorAction SilentlyContinue | Select-Object -First 1
+                    if ($PossiblePython) {
+                        Write-Host "Using Python path: $($PossiblePython.FullName)" -ForegroundColor Green
+                        $PythonPath = $PossiblePython.FullName
+                        $PythonFound = $true
+                        break
+                    }
+                }
+                # Also check if python.exe is directly in the directory
+                $directPython = Join-Path $dir "python.exe"
+                if (Test-Path $directPython) {
+                    Write-Host "Using Python path: $directPython" -ForegroundColor Green
+                    $PythonPath = $directPython
+                    $PythonFound = $true
+                    break
+                }
+            }
+        }
+    }
+    
+    if (-not $PythonFound) {
+        Write-Host "ERROR: No Python installation found." -ForegroundColor Red
+        Write-Host "Please install Python or update the `$PythonPath variable at line 5." -ForegroundColor Red
+        Write-Host "You can download Python from: https://www.python.org/downloads/" -ForegroundColor Yellow
         exit 1
     }
 }

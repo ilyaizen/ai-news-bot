@@ -1,9 +1,16 @@
-logs/service_stderr.log
-logs/service_stdout.log
-ai_news_bot_error.log
-delete
+# Secrets
 .env
-ai_news_bot.log
+
+# Runtime state/logs
 posted_links.json
 ai_news_bot.log
-/__pycache__
+*.log
+logs/
+
+# Local Python artifacts
+venv/
+__pycache__/
+*.py[cod]
+
+# Local scratch
+delete

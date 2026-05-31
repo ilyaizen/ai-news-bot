@@ -1,1 +1,1 @@
-/root/workspace/HyperVault/projects/ai-news-bot/README.md
+# ai-news-bot

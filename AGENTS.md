@@ -1,1 +1,3 @@
-/root/workspace/HyperVault/projects/ai-news-bot/AGENTS.md
+# ai-news-bot
+
+Canonical agent instructions live in HyperVault.

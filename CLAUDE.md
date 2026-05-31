@@ -1,1 +1,3 @@
-/root/workspace/HyperVault/projects/ai-news-bot/CLAUDE.md
+# ai-news-bot
+
+Canonical agent instructions live in HyperVault.

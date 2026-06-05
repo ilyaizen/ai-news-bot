@@ -44,7 +44,8 @@ In the Discord Developer Portal:
 
 ## Operational notes
 
-- `posted_links.json` is the bot's memory. Delete it only if you want to reseed the feed.
+- `posted_links.json` is the bot's memory and the unique dedupe list. Keep it under version control and commit it regularly so restarts do not re-post old items.
+- Delete `posted_links.json` only if you intentionally want to reseed the feed or force reposting.
 - The bot is pointed at one source only. If you want to change the feed, change `NEWS_SOURCE_URL` in `main.py`.
 - The source is noisy and changes over time, so the scraping logic may need maintenance if Histre changes its HTML.
 

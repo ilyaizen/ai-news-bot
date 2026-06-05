@@ -11,7 +11,8 @@ Use the files in this repo as the source of truth for runtime behavior and deplo
 ## Things to keep current
 
 - `NEWS_SOURCE_URL` in `main.py` if the source changes.
-- `posted_links.json` only when you intentionally want to reseed or repost.
+- `posted_links.json` is the unique dedupe list. Commit it regularly so reposts stay suppressed across restarts.
+- Only clear `posted_links.json` when you intentionally want to reseed or repost.
 
 ## Commands
 
